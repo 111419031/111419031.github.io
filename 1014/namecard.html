@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>名片</title>
+    <style>
+        :root {
+            --main-blue: #2563eb;
+        }
+        body {
+            background: #f3f4f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+        .card {
+            display: flex;
+            width: 500px;
+            height: 220px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .card-left {
+            position: relative;
+            width: 220px;
+            height: 100%;
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            z-index: 1;
+            position: relative;
+        }
+        .hex-mask {
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            /* 正六邊形遮罩 */
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+            overflow: hidden;
+        }
+        .card-right {
+            flex: 1;
+            background: #fff;
+            color: var(--main-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 32px 24px;
+        }
+        .card-right h2 {
+            margin: 0 0 12px 0;
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .card-right p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-left">
+            <div class="hex-mask">
+                <img class="profile-img" src="20250927_172533.jpg" alt="Profile">
+            </div>
+        </div>
+        <div class="card-right">
+            <h2>熊芷妍</h2>
+            <p>
+                打自我介紹的地方
+            </p>
+        </div>
+    </div>
+</body>
+</html>
