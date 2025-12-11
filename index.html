@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>電子作品集 — 我的作品</title>
+  <style>
+    :root{--bg:#f7f8fa;--accent:#1e88e5;--muted:#6b7280;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans TC',Helvetica,Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#0ea5e9 0%,#1e88e5 100%);color:#fff;padding:24px 16px}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700;letter-spacing:0.4px}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:16px;font-weight:600}
+    .hero{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-top:20px}
+    .hero .intro{flex:1;min-width:260px}
+    .hero h1{margin:0 0 8px;font-size:28px}
+    .hero p{margin:0;color:rgba(255,255,255,0.95)}
+    .btn{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:8px;background:#fff;color:var(--accent);font-weight:700;text-decoration:none}
+    main{padding:40px 16px}
+    .about, .features{background:transparent;margin-bottom:24px}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 1px 6px rgba(16,24,40,0.06)}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    footer{border-top:1px solid #e6e9ef;padding:20px 16px;background:transparent}
+    .small{font-size:13px;color:var(--muted)}
+    /* responsive */
+    @media (max-width:640px){
+      .nav{flex-direction:column;align-items:flex-start}
+      nav a{margin-left:0;margin-top:8px}
+      .hero h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">我的電子作品集</div>
+      <nav>
+        <a href="#about">介紹</a>
+        <a href="#features">功能</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+    <div class="container hero">
+      <div class="intro">
+        <h1>記錄專案、展示技能與成長</h1>
+        <p>這是一個用來整理與展示我作品的電子作品集。每個項目都包含簡介、技術、截圖與連結，方便分享與檢視。</p>
+        <a class="btn" href="#features">查看功能</a>
+      </div>
+      <div class="intro" style="min-width:200px;max-width:320px">
+        <div class="card" style="background:rgba(255,255,255,0.12);color:#fff">
+          <h3 style="color:#fff;margin-bottom:6px">快速重點</h3>
+          <p style="color:rgba(255,255,255,0.9)">作品分類 • 行動相容 • 下載/檢視 • 聯絡表單</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section id="about" class="about">
+      <h2>關於這個作品集</h2>
+      <p class="small">目的：記錄學習歷程與完成的專案，方便分享給老師、面試官或同好檢視。下面展示的內容為範例項目，你可以替換成自己的專案內容與圖片。</p>
+    </section>
+
+    <section id="features" class="features">
+      <h2>功能</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>作品列表</h3>
+          <p>每個作品含標題、描述、使用技術與連結，並支援圖片預覽。</p>
+        </div>
+        <div class="card">
+          <h3>分類與篩選</h3>
+          <p>可依類型（網頁、程式、設計）或技術標籤快速過濾作品。</p>
+        </div>
+        <div class="card">
+          <h3>行動相容</h3>
+          <p>響應式版面設計，手機與桌面皆能良好顯示。</p>
+        </div>
+        <div class="card">
+          <h3>聯絡與下載</h3>
+          <p>可提供聯絡表單與作品下載或外部連結（GitHub、作品頁）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <h2>範例作品</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>範例：個人網站</h3>
+          <p>靜態網站，使用 HTML/CSS，包含 RWD 與簡易互動效果。</p>
+        </div>
+        <div class="card">
+          <h3>範例：小型應用程式</h3>
+          <p>客製化功能說明與技術堆疊，附上程式碼連結。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:8px">
+      <div class="small">&copy; 2025 我的電子作品集 • 建議將專案放至 GitHub Pages 或 Netlify 以便分享</div>
+      <div class="small">聯絡：<a id="contact" href="mailto:youremail@example.com">youremail@example.com</a></div>
+    </div>
+  </footer>
+</body>
+</html>
