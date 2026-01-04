@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>作品集 — 我的作品</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root{--bg:#f7f8fa;--accent:#1e88e5;--muted:#6b7280;--card:#ffffff}
     *{box-sizing:border-box}
@@ -21,7 +22,8 @@
     main{padding:40px 16px}
     .about, .features{background:transparent;margin-bottom:24px}
     .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 1px 6px rgba(16,24,40,0.06)}
+    .card-link{text-decoration:none;color:inherit;display:block}
+    .card-img{width:100%;height:auto;border-radius:8px 8px 0 0;margin-bottom:8px}
     .card h3{margin:0 0 8px;font-size:18px}
     .card p{margin:0;color:var(--muted);font-size:14px}
     footer{border-top:1px solid #e6e9ef;padding:20px 16px;background:transparent}
@@ -33,6 +35,7 @@
       .hero h1{font-size:22px}
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
   <header>
@@ -46,8 +49,8 @@
     </div>
     <div class="container hero">
       <div class="intro">
-        <h1>網路設計期末作業testing</h1>
-        <p>這是一個用來整理與展示我作品的電子作品集。</p>
+        <h1>網路設計期末作業</h1>
+        <p>這是一個用來整理與展示我本學期各項課程作品的電子作品集。</p>
         <a class="btn" href="#features">查看功能</a>
       </div>
 
@@ -56,43 +59,57 @@
   <main class="container">
     <section id="about" class="about">
       <h2>關於這個作品集</h2>
-      <p class="small">目的：記錄學習歷程與完成的專案，方便分享給老師、面試官或同好檢視。</p>
+      <p class="small">目的：展示本學期各項課程作品，因為我沒什麼作品把素描課的也搬來用。</p>
     </section>
 
     <section id="features" class="features">
-      <h2>功能</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>作品列表</h3>
-          <p>每個作品含標題、描述、使用技術與連結，並支援圖片預覽。</p>
-        </div>
-    
-        <div class="card">
-          <h3>聯絡與下載</h3>
-          <p>可提供聯絡表單與作品下載或外部連結（GitHub、作品頁）。</p>
-        </div>
+      <h2>素描作品展示(循環展示)</h2>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="ImageToStl.com_IMG_1774.HEIC.png" class="d-block w-100" alt="...">
       </div>
+      <div class="carousel-item">
+        <img src="ImageToStl.com_IMG_1854.HEIC.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="ImageToStl.com_IMG_1855.HEIC.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
     </section>
 
-      <section id="examples">
-        <h2>範例作品</h2>
-        <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-        </div>
+    <section id="examples">
+      <h2>網站作品展示(點擊前往)</h2>
+      <div class="card-grid">
+        <a href="https://sites.google.com/stu.ntue.edu.tw/20251125/%E6%B4%BB%E5%8B%95%E8%B3%87%E8%A8%8A" class="card-link">
+          <div class="card">
+            <img src="a.jpg" alt="..." class="card-img">
+            <h3>範例：小組協作製作</h3>
+            <p>網站實戰02：「「130向前走」國立臺北教育大學130週年校慶點燈祈福儀式」宣傳網站</p>
+          </div>
+        </a>
+        <a href="https://111419031.github.io/website.html" class="card-link">
+          <div class="card">
+            <img src="b.jpg" alt="..." class="card-img">
+            <h3>範例：個人網站製作</h3>
+            <p>網站實戰01：「教學科技應用設計競賽」宣傳網站</p>
+          </div>
+        </a>
+      </div>
     </section>
   </main>
   <footer>
